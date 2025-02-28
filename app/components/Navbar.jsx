@@ -29,7 +29,7 @@ export const Navbar = () => {
 
   return (
     <div className="fixed w-full top-0 left-0 z-50">
-      <div className="flex items-center justify-center text-primary md:justify-between md:px-60 mt-8">
+      <div className="flex items-center justify-center text-primary md:justify-between md:px-60 mt-4 lg:mt-8">
         <div
           className={`nav-start md:block hidden duration-200 ${
             isScrolled ? "invisible opacity-0" : "block"

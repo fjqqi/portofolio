@@ -36,7 +36,7 @@ export default function RootLayout({ children }) {
         style={backgroundStyle}
       >
         <Navbar />
-        <div className="min-w-screen mt-32 overflow-hidden lg:mt-40">{children}</div>
+        <div className="min-w-screen mt-24 overflow-hidden lg:mt-40">{children}</div>
       </body>
     </html>
   );
