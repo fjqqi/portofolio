@@ -1,6 +1,8 @@
 'use client'
 import React, { useEffect, useState } from "react";
 import { Navlink } from "./navbar/Navlink";
+import { Button } from "./Button";
+import Link from "next/link";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,7 +23,7 @@ export const Navbar = () => {
 
   return (
     <div className="fixed w-full top-0 left-0 z-50">
-      <div className="flex items-center justify-center text-primary md:justify-between md:px-28 mt-8">
+      <div className="flex items-center justify-center text-primary md:justify-between md:px-60 mt-8">
         <div className={`nav-start md:block hidden duration-200 ${isScrolled ? "invisible opacity-0" : "block"}`}>
           <div className="logo font-bold text-3xl text-primary  ">Fiqqi</div>
         </div>
@@ -33,9 +35,9 @@ export const Navbar = () => {
         </div>
 
         <div className={`nav-end md:block hidden duration-200 ${isScrolled ? "invisible opacity-0" : "block"}`}>
-          <button className="inline-flex py-2 px-6 items-center border-1 hover:text-white hover:bg-primary  cursor-pointer duration-300 border-primary rounded-full">
-            Say Hello
-          </button>
+          <Link href="contact">
+            <Button style="outline" text={"Say Hello"}/>
+          </Link>
         </div>
       </div>
     </div>

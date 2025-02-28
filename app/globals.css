@@ -4,6 +4,11 @@
   --font-sans: var(--font-outfit);
   --font-mono: var(--font-geist-mono);
   --color-primary: #2F584F;
+  --color-primary-dark: #1E3832;
+  --color-blueTag: #ADD8FF;
+  --color-purpleTag: #E59CF0;
+  --color-orangeTag: #FF8947;
+  
   --color-tahiti: #3ab7bf;
   --color-bermuda: #78dcca;
 
@@ -25,4 +30,16 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Outfit, Helvetica, sans-serif;
+}
+.frame {
+  width: 380px;
+  height: 380px;
+  position: relative;
+  clip-path: path('M0 44C0 19.7 19.7 0 44 0h292c24.301 0 44 19.7 44 44v239.693c0 21.712-15.838 40.178-37.297 43.486l-292 45.006C24.045 376.294 0 355.671 0 328.699V44Z');
+}
+
+.frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the frame */
 }
