@@ -28,6 +28,13 @@ export default function Home() {
             <div className="bg-primary w-fit rounded-[64px] p-6">
               <div className="h-[486px]  w-fit p-5 rounded-[64px]    relative justify-center ">
                 <div className="frame">
+                  <Image
+                    src={"https://awsimages.detik.net.id/community/media/visual/2019/10/10/bb1bf3b6-6460-46dd-9de4-f7baea9c0afc_34.jpeg?w=1200"}
+                    className=""
+                    width={500}
+                    height={500}
+                    alt="@fjqqi"
+                  />
                   <img
                     src="https://awsimages.detik.net.id/community/media/visual/2019/10/10/bb1bf3b6-6460-46dd-9de4-f7baea9c0afc_34.jpeg?w=1200"
                     alt="Framed Picture"
