@@ -31,12 +31,22 @@ body {
   background: var(--background);
   font-family: Outfit, Helvetica, sans-serif;
 }
+
 .frame {
-  width: 380px;
-  height: 380px;
+  width: 285px;
+  height: 285px;
   position: relative;
-  clip-path: path('M0 44C0 19.7 19.7 0 44 0h292c24.301 0 44 19.7 44 44v239.693c0 21.712-15.838 40.178-37.297 43.486l-292 45.006C24.045 376.294 0 355.671 0 328.699V44Z');
+  clip-path: path('M0 33C0 14.775 14.775 0 33 0h219c18.225 0 33 14.775 33 33v179.77c0 16.284-11.878 30.134-27.973 32.614l-219 33.755C18.034 282.221 0 266.753 0 246.524V33Z');
 }
+
+@media (min-width: 1024px) { /* lg screen and above */
+  .frame {
+    width: 380px;
+    height: 380px;
+    clip-path: path('M0 44C0 19.7 19.7 0 44 0h292c24.301 0 44 19.7 44 44v239.693c0 21.712-15.838 40.178-37.297 43.486l-292 45.006C24.045 376.294 0 355.671 0 328.699V44Z');
+  }
+}
+
 
 .frame img {
   width: 100%;
