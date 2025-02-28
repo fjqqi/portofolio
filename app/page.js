@@ -1,7 +1,10 @@
+"use client";
 import Image from "next/image";
 import { Navbar } from "./components/Navbar";
-import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
-import { Tag } from "./components/homepage/Tag";
+import { Hello } from "./components/homepage/TextHello";
+import { TextJob } from "./components/homepage/TextJob";
+import { TextDescription } from "./components/homepage/TextDescription";
+import { HeroBox } from "./components/homepage/HeroBox";
 
 export default function Home() {
   return (
@@ -14,18 +17,17 @@ export default function Home() {
 
         <div className="lg:px-60 mt-40 home w-full flex ">
           <div className="left-home text-primary mt-4">
-            <p className="text-8xl">Hello. Im Fiqqi</p>
+            <Hello/>
 
-            <p className="text-6xl mt-4">A * Web Developer</p>
+            <TextJob/>
 
-            <p className="text-xl w-[80%] mt-9">
-              I&apos;m passionate about crafting experiences that are engaging,
-              accessible, clean and user-centric. btw I listen to music 24/7.
-            </p>
+            <TextDescription/>
           </div>
 
           <div className="right-home text-primary">
-            <div className="bg-primary w-fit rounded-[64px] p-6">
+            <HeroBox/>
+            
+            {/* <div className="bg-primary w-fit rounded-[64px] p-6">
               <div className="h-[486px]  w-fit p-5 rounded-[64px]    relative justify-center ">
                 <div className="frame">
                   <Image
@@ -58,7 +60,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* <p className="text-6xl mt-4">A * Web Developer</p>
 
             <p className="text-xl w-1/2 mt-9">
