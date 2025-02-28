@@ -35,10 +35,7 @@ export default function Home() {
                     height={500}
                     alt="@fjqqi"
                   />
-                  <img
-                    src="https://awsimages.detik.net.id/community/media/visual/2019/10/10/bb1bf3b6-6460-46dd-9de4-f7baea9c0afc_34.jpeg?w=1200"
-                    alt="Framed Picture"
-                  />
+
                 </div>
 
                 <div className=" text-black bottom-12 left-0 right-0 min-w-full h-20 absolute px-4">
