@@ -6,6 +6,10 @@ const nextConfig = {
           protocol: "https",
           hostname: "awsimages.detik.net.id",
         },
+        {
+            protocol: "https",
+            hostname: "encrypted-tbn0.gstatic.com",
+          },
       ],
     },
   };

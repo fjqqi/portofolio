@@ -5,68 +5,51 @@ import { Hello } from "./components/homepage/TextHello";
 import { TextJob } from "./components/homepage/TextJob";
 import { TextDescription } from "./components/homepage/TextDescription";
 import { HeroBox } from "./components/homepage/HeroBox";
+import { Star } from "./components/homepage/Star";
+import { FaSpotify, FaPlay } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { NowPlayingBox } from "./components/homepage/NowPlayingBox";
 
 export default function Home() {
   return (
     <>
       <div className="min-w-screen">
         <Navbar />
-        {/* <div className="px-28 mt-28 min-h-screen">
-          <div className="">Hi Im Fiqqi</div>
-        </div> */}
 
-        <div className="lg:px-60 mt-40 home w-full flex ">
-          <div className="left-home text-primary mt-4">
-            <Hello/>
+        <div className="lg:px-60 mt-40 home  w-full flex ">
+          <div className="left-home text-primary mt-4 max-w-full min-w-[700px] relative">
+            <div className="absolute -left-18 top-22 -z-50">
+              <Star />
+            </div>
 
-            <TextJob/>
+            <div className="absolute right-10 -top-10  -z-50">
+              <Star />
+            </div>
 
-            <TextDescription/>
+            <div className="absolute right-32 top-58  -z-50">
+              <Star />
+            </div>
+
+            <Hello />
+
+            <TextJob />
+
+            <TextDescription />
+
+            <div className="mt-10 flex">
+              <div className="min-h-14 w-fit p-4 gap-x-2 flex items-center rounded-[50px] bg-white">
+                <FaSpotify className="size-20" />
+                <FaPlay className="size-18" />
+              </div>
+
+              <NowPlayingBox/>
+
+             
+            </div>
           </div>
 
           <div className="right-home text-primary">
-            <HeroBox/>
-            
-            {/* <div className="bg-primary w-fit rounded-[64px] p-6">
-              <div className="h-[486px]  w-fit p-5 rounded-[64px]    relative justify-center ">
-                <div className="frame">
-                  <Image
-                    src={
-                      "https://awsimages.detik.net.id/community/media/visual/2019/10/10/bb1bf3b6-6460-46dd-9de4-f7baea9c0afc_34.jpeg?w=1200"
-                    }
-                    className=""
-                    width={500}
-                    height={500}
-                    alt="@fjqqi"
-                  />
-                </div>
-
-                <div className=" text-black bottom-12 left-0 right-0 min-w-full h-20 absolute px-4">
-                  <Tag
-                    text={"Fiqqi Basri"}
-                    link={"https://www.facebook.com/fjqqi/"}
-                    icon={<FaFacebook className="size-6" />}
-                    className="bg-blueTag right-6 rotate-[5deg]"
-                  />
-                  <Tag
-                    text={"Fjqqi"}
-                    icon={<FaGithub className="size-6 " />}
-                    className={`bg-purpleTag right-16 rotate-[8deg] top-16`}
-                  />
-                  <Tag
-                    text={"@fjqqi"}
-                    icon={<FaInstagram className="size-6" />}
-                    className={`left-8 bg-orangeTag top-16 rotate-[-10deg]`}
-                  />
-                </div>
-              </div>
-            </div> */}
-            {/* <p className="text-6xl mt-4">A * Web Developer</p>
-
-            <p className="text-xl w-1/2 mt-9">
-              I'm passionate about crafting experiences that are engaging,
-              accessible, clean and user-centric. btw i listen to music 24/7.
-            </p> */}
+            <HeroBox />
           </div>
         </div>
 
