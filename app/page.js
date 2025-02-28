@@ -9,6 +9,8 @@ import { Star } from "./components/homepage/Star";
 import { FaSpotify, FaPlay } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { NowPlayingBox } from "./components/homepage/NowPlayingBox";
+import { SpotifyBox } from "./components/homepage/SpotifyBox";
+import { Button } from "./components/Button";
 
 export default function Home() {
   return (
@@ -16,7 +18,7 @@ export default function Home() {
       <div className="min-w-screen">
         <Navbar />
 
-        <div className="lg:px-60 mt-40 home  w-full flex ">
+        <div className="lg:px-60 mt-40 home  w-full justify-center flex ">
           <div className="left-home text-primary mt-4 max-w-full min-w-[700px] relative">
             <div className="absolute -left-18 top-22 -z-50">
               <Star />
@@ -37,15 +39,24 @@ export default function Home() {
             <TextDescription />
 
             <div className="mt-10 flex">
-              <div className="min-h-14 w-fit p-4 gap-x-2 flex items-center rounded-[50px] bg-white">
-                <FaSpotify className="size-20" />
-                <FaPlay className="size-18" />
-              </div>
+              <SpotifyBox />
 
-              <NowPlayingBox/>
-
-             
+              <NowPlayingBox />
             </div>
+
+            <motion.div
+              initial={{ opacity: 0, }} // Start hidden and move down
+              animate={{ opacity: 1, }} // Fade in and reach normal position
+              transition={{ duration: 0.2, ease: "easeIn" , delay: 6}}
+            >
+              <Button
+                style={"outline"}
+                className={
+                  "w-[600px] flex justify-center items-center mt-10 border-2 py-3"
+                }
+                text={"Know Me Better"}
+              />
+            </motion.div>
           </div>
 
           <div className="right-home text-primary">

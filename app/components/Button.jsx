@@ -1,10 +1,10 @@
 import React from "react";
 
-export const Button = ({ style, text }) => {
+export const Button = ({ style, text, className }) => {
   return (
     <>
       {style === "outline" ? (
-        <button className="inline-flex py-2 px-6 items-center border hover:text-white hover:bg-primary cursor-pointer duration-300 border-primary rounded-full">
+        <button className={`${className} inline-flex py-2 px-6 items-center border hover:text-white hover:bg-primary cursor-pointer duration-300 border-primary rounded-full`}>
           {text}
         </button>
       ) : (

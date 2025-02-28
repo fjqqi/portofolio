@@ -11,7 +11,7 @@ export const TextJob = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % jobs.length);
-    }, 2500); // Change every 2 seconds
+    }, 5000); // Change every 2 seconds
 
     return () => clearInterval(interval); // Cleanup on unmount
   }, []);
@@ -20,7 +20,7 @@ export const TextJob = () => {
     <motion.p
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, ease: "easeOut", delay: 0.4 }}
+      transition={{ duration: 0.2, ease: "easeOut", delay: 0.3 }}
       className="text-6xl mt-4 font-bold text-[#2F584F]"
     >
       A *{" "}
