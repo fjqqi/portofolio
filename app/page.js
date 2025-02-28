@@ -15,9 +15,9 @@ import { Button } from "./components/Button";
 export default function Home() {
   return (
     <>
-      <div className="absolute  left-[890px] top-40    z-50">
+      {/* <div className="absolute  left-[890px] top-40    z-50">
         <Star />
-      </div>
+      </div> */}
       <div className="lg:min-w-screen overflow-hidden relative">
         <div className="home  w-full justify-center flex  lg:px-60 flex-col lg:flex-row">
           <div className="left-home text-primary mt-4 max-w-full min-w-full lg:min-w-[700px] flex  flex-col  justify-center items-center lg:block  relative">
