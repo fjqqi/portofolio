@@ -7,7 +7,7 @@ export const SpotifyBox = () => {
     <motion.div
       initial={{ opacity: 0,  }} // Start hidden and move down
       animate={{ opacity: 1, }}
-      transition={{ duration: 0.2, ease: "easeOut", delay: 1.5 }}
+      transition={{ duration: 0.2, ease: "easeOut", delay: 2 }}
     >
       <motion.div
         initial={{ opacity: 1, x: 200 }} // Start hidden and move down

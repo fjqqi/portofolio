@@ -11,14 +11,14 @@ export const HeroBox = () => {
 
   return (
     <motion.div
-      className="herobox bg-primary w-fit rounded-[64px] p-6 hover:shadow-lg hover:-translate-y-[2px] duration-300"
+      className="herobox bg-primary w-fit rounded-[64px] lg:relative lg:inset-0 -bottom-16 lg:rotate-0 rotate-[6deg] left-30 absolute p-6 hover:shadow-lg hover:-translate-y-[2px] duration-300"
       onHoverStart={() => setIsHovered(true)} // When hovering
       onHoverEnd={() => setIsHovered(false)} // When leavin
       initial={{ opacity:0,  x:20 }}
       animate={{ opacity: 1 , x: 0, }} // Target state
       transition={{ duration: 0.5, ease: "easeInOut" }} //
     >
-      <div className="h-[486px] w-fit p-5 rounded-[64px] relative justify-center">
+      <div className="h-[400px] lg:h-[486px] w-fit p-5 rounded-[64px] relative justify-center">
         <motion.div
           className="frame"
           animate={{ y: isHovered ? 10 : 0 ,x: isHovered ? 0 : 0, scale: isHovered ? 1 : 1  }} // Scale up when hovered

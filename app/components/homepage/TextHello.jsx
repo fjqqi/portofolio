@@ -5,7 +5,7 @@ import React from "react";
 export const Hello = () => {
   return (
     <motion.p
-      className="text-8xl"
+      className="lg:text-8xl text-5xl"
       initial={{ opacity: 0, y: -5 }} // Start hidden and move down
       animate={{ opacity: 1, y: 0 }} // Fade in and reach normal position
       transition={{ duration: 0.2, ease: "easeIn" }} // Smooth transition

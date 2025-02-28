@@ -15,16 +15,13 @@ import { Button } from "./components/Button";
 export default function Home() {
   return (
     <>
+      <div className="absolute  left-[890px] top-40    z-50">
+        <Star />
+      </div>
       <div className="min-w-screen">
-        <Navbar />
-
-        <div className="lg:px-60 mt-40 home  w-full justify-center flex ">
-          <div className="left-home text-primary mt-4 max-w-full min-w-[700px] relative">
+        <div className="home  w-full justify-center flex  lg:px-60 flex-col lg:flex-row">
+          <div className="left-home text-primary mt-4 max-w-full min-w-full lg:min-w-[700px] flex  flex-col  justify-center items-center lg:block  relative">
             <div className="absolute -left-18 top-22 -z-50">
-              <Star />
-            </div>
-
-            <div className="absolute right-10 -top-10  -z-50">
               <Star />
             </div>
 
@@ -32,27 +29,29 @@ export default function Home() {
               <Star />
             </div>
 
-            <Hello />
+            <div className=" max-w-[85%] lg:max-w-full flex flex-col">
+              <Hello />
 
-            <TextJob />
+              <TextJob />
 
-            <TextDescription />
+              <TextDescription />
+            </div>
 
-            <div className="mt-10 flex">
+            <div className="mt-10 hidden lg:flex">
               <SpotifyBox />
 
               <NowPlayingBox />
             </div>
 
             <motion.div
-              initial={{ opacity: 0, }} // Start hidden and move down
-              animate={{ opacity: 1, }} // Fade in and reach normal position
-              transition={{ duration: 0.2, ease: "easeIn" , delay: 6}}
+              initial={{ opacity: 0 }} // Start hidden and move down
+              animate={{ opacity: 1 }} // Fade in and reach normal position
+              transition={{ duration: 0.2, ease: "easeIn", delay: 6 }}
             >
               <Button
                 style={"outline"}
                 className={
-                  "w-[600px] flex justify-center items-center mt-10 border-2 py-3"
+                  "w-[600px] flex justify-center rounded-2xl items-center mt-10  py-4"
                 }
                 text={"Know Me Better"}
               />

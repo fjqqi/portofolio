@@ -21,7 +21,7 @@ export const TextJob = () => {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.2, ease: "easeOut", delay: 0.3 }}
-      className="text-6xl mt-4 font-bold text-[#2F584F]"
+      className="lg:text-6xl text-4xl mt-4 font-bold text-[#2F584F]"
     >
       A *{" "}
       <AnimatePresence mode="wait">

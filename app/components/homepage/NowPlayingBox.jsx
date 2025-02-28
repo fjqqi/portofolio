@@ -8,7 +8,7 @@ export const NowPlayingBox = () => {
 <motion.div
   initial={{ opacity: 0, y: 3 }}
   animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.4, ease: "easeOut", delay: 0.6 }}
+  transition={{ duration: 0.4, ease: "easeOut", delay: 1.5 }}
   className="relative"
 >
   {/* Now Playing Text (Temporary) */}
