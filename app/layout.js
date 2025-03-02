@@ -2,6 +2,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Outfit } from "next/font/google";
 import { Navbar } from "./components/Navbar";
+import { AnimatedBackground } from "./components/AnimatedBackground";
+
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,16 +30,27 @@ export const metadata = {
 const backgroundStyle = {
   background: `linear-gradient(113.822deg, rgba(47, 88, 79, 0.2) 23%, rgba(255, 255, 255, 0.2) 100%), linear-gradient(#FFFFFF, #FFFFFF)`,
 };
+const bg = {
+  backgroundColor: "hsla(144,64%,84%,1)",
+  backgroundImage: `
+    radial-gradient(at 0% 100%, hsla(195,91%,33%,1) 0px, transparent 50%),
+radial-gradient(at 0% 100%, hsla(195,91%,33%,1) 0px, transparent 50%),
+radial-gradient(at 46% 27%, hsla(71,100%,86%,1) 0px, transparent 50%),
+radial-gradient(at 99% 98%, hsla(173,70%,39%,1) 0px, transparent 50%),
+radial-gradient(at 18% 22%, hsla(173,100%,39%,1) 0px, transparent 50%),
+radial-gradient(at 100% 0%, hsla(201,74%,41%,1) 0px, transparent 50%);
+  `,
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${outfit.variable}  ${geistMono.variable} antialiased`}
-        style={backgroundStyle}
-      >
+      <body className="relative" >
+        <AnimatedBackground /> 
         <Navbar />
-        <div className="min-w-screen mt-24 overflow-hidden lg:mt-40">{children}</div>
+        <div className="relative z-10 min-w-screen mt-24 md:mt-32 overflow-hidden lg:mt-40">
+          {children}
+        </div>
       </body>
     </html>
   );

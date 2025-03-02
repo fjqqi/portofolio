@@ -8,7 +8,7 @@ export const Navlink = ({ text, isActive, link, className }) => {
       {/* Sliding background when active */}
       {isActive && (
         <motion.div
-          className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-full bg-white/50 rounded-full backdrop-blur-sm"
+          className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-full bg-white/80 rounded-full backdrop-blur-sm"
           layoutId="activeIndicator"
           transition={{ type: "spring", stiffness: 200, damping: 30 }}
         />

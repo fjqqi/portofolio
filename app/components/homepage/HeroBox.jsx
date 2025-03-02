@@ -11,7 +11,7 @@ export const HeroBox = () => {
 
   return (
     <motion.div
-      className="herobox bg-primary w-fit rounded-[64px] lg:relative lg:inset-0 top-60 lg:rotate-0 rotate-[6deg] left-40 absolute p-2 lg:p-6 hover:shadow-lg hover:-translate-y-[2px] duration-300"
+      className="herobox bg-primary w-fit rounded-[64px] lg:relative lg:inset-0 top-60 md:top-5 lg:rotate-0 rotate-[6deg]  -right-20 md:-right-15 absolute p-2 lg:p-6 hover:shadow-lg hover:-translate-y-[2px] duration-300"
       onHoverStart={() => setIsHovered(true)} // When hovering
       onHoverEnd={() => setIsHovered(false)} // When leavin
       initial={{ opacity: 0, x: 20 }}

@@ -12,8 +12,6 @@ export const Navbar = () => {
 
   const pathname = usePathname();
 
-
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -29,38 +27,49 @@ export const Navbar = () => {
 
   return (
     <div className="fixed w-full top-0 left-0 z-50">
-      <div className="flex items-center justify-center text-primary md:justify-between md:px-60 mt-4 lg:mt-8">
-        <div
-          className={`nav-start md:block hidden duration-200 ${
-            isScrolled ? "invisible opacity-0" : "block"
-          }`}
-        >
-          <div className="logo font-bold text-3xl text-primary  ">Fiqqi</div>
-        </div>
-        <div
-          className={`${
-            isScrolled && " bg-gray-400/20 backdrop-blur-2xl rounded-full"
-          } nav-center  bg p-2 duration-300`}
-        >
-          {pages.map((page, i) => (
-            <Navlink text={page.name} link={page.url} key={i}     isActive={pathname === page.url} />
-          ))}
-          <Navlink text="Contact" className="md:hidden" /> 
+      <div className="flex justify-center">
+        <div className=" inline-block  md:min-w-[400px] md:px-6 lg:px-0 md:w-[850px] lg:w-[1200px]  ">
+          <div className="flex items-center justify-center text-primary md:justify-between  mt-4 lg:mt-8">
+            <div
+              className={`nav-start md:block hidden duration-200 ${
+                isScrolled ? "invisible opacity-0" : "block"
+              }`}
+            >
+              <div className="logo font-bold text-3xl text-primary  ">
+                Fiqqi
+              </div>
+            </div>
+            <div
+              className={`${
+                isScrolled && " bg-gray-400/20 backdrop-blur-2xl rounded-full"
+              } nav-center  bg p-2 duration-300`}
+            >
+              {pages.map((page, i) => (
+                <Navlink
+                  text={page.name}
+                  link={page.url}
+                  key={i}
+                  isActive={pathname === page.url}
+                />
+              ))}
+              <Navlink text="Contact" className="md:hidden" />
 
-          {/* <Navlink text="Home" isActive={true} isHome={true} />
+              {/* <Navlink text="Home" isActive={true} isHome={true} />
           <Navlink text="About" link="about" />
           <Navlink text="Projects" />
           <Navlink text="Contact" className="md:hidden" /> */}
-        </div>
+            </div>
 
-        <div
-          className={`nav-end md:block hidden duration-200 ${
-            isScrolled ? "invisible opacity-0" : "block"
-          }`}
-        >
-          <Link href="contact">
-            <Button style="outline" text={"Say Hello"} />
-          </Link>
+            <div
+              className={`nav-end md:block hidden duration-200 ${
+                isScrolled ? "invisible opacity-0" : "block"
+              }`}
+            >
+              <Link href="contact">
+                <Button style="outline" text={"Say Hello"} />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -12,6 +12,7 @@ import { NowPlayingBox } from "./components/homepage/NowPlayingBox";
 import { SpotifyBox } from "./components/homepage/SpotifyBox";
 import { Button } from "./components/Button";
 
+
 export default function Home() {
   return (
     <>
@@ -19,17 +20,42 @@ export default function Home() {
         <Star />
       </div> */}
       <div className="lg:min-w-screen overflow-hidden relative">
-        <div className="home  w-full justify-center flex  lg:px-60 flex-col lg:flex-row">
-          <div className="left-home text-primary mt-4 max-w-full min-w-full lg:min-w-[700px] flex  flex-col  justify-center items-center lg:block  relative">
-            <div className="absolute -left-18 top-22 -z-50">
+        <div className="home  w-full justify-center flex min-h-fit lg:py-3  lg:px-60 flex-col lg:flex-row ">
+          {/* Left Section */}
+          <div className="left-home  text-primary mt-4  w-[400px]  lg:min-w-[700px] flex  flex-col  justify-center items-center lg:block  relative">
+          
+          {/* star desktop */}
+          <div className="md:hidden  absolute right-8 top-12 -z-50">
+              <Star size={'small'}/>
+            </div>
+
+            <div className="md:hidden absolute  right-12 bottom-4 -z-50">
+              <Star size='small'/>
+            </div>
+
+            <div className="md:hidden absolute  left-4 -bottom-10 -z-50">
+              <Star size='small'/>
+            </div>
+
+
+            
+
+            {/* star */}
+
+            <div className="md:block   hidden absolute -left-16 top-22 -z-50">
+              <Star/>
+            </div>
+
+            <div className="md:block  hidden absolute -left- bottom-12 -z-50">
               <Star />
             </div>
 
-            <div className="absolute right-32 top-58  -z-50">
+
+            <div className="md:block hidden absolute right-24 top-56  -z-50">
               <Star />
             </div>
 
-            <div className=" max-w-[85%] lg:max-w-full bg-b flex flex-col">
+            <div className=" max-w-[85%] md:lg:max-w-full bg-b flex flex-col">
               <Hello />
 
               <TextJob />
@@ -37,7 +63,7 @@ export default function Home() {
               <TextDescription />
             </div>
 
-            <div className="mt-10 hidden lg:flex">
+            <div className="mt-10 hidden max-w-[85%]  md:flex">
               <SpotifyBox />
 
               <NowPlayingBox />
@@ -47,19 +73,20 @@ export default function Home() {
               initial={{ opacity: 0 }} // Start hidden and move down
               animate={{ opacity: 1 }} // Fade in and reach normal position
               transition={{ duration: 0.2, ease: "easeIn", delay: 6 }}
-              className="hidden lg:block"
+              className="hidden md:block lg:block max-w-[85%]"
             >
               <Button
                 style={"outline"}
                 className={
-                  "w-[600px] lg:flex justify-center rounded-2xl items-center mt-10  py-4"
+                  "lg:w-[600px] md:w-[350px] lg:flex justify-center rounded-2xl items-center md:mt-10 lg:mt-10  py-4"
                 }
                 text={"Know Me Better"}
               />
             </motion.div>
           </div>
 
-          <div className="right-home text-primary">
+          {/* Right Section */}
+          <div className="right-home  text-primary">
             <HeroBox />
           </div>
         </div>
